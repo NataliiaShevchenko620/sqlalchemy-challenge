@@ -6,14 +6,14 @@ This project performs a climate analysis on Hawaii weather data, providing insig
 
 The project is organized as follows:
 
-- `climate_starter_solved.ipynb`: A Jupyter Notebook containing the climate analysis and data visualizations. It includes detailed analysis of precipitation, temperature, and station data using SQLAlchemy to interact with the SQLite database. Visualizations are created using Matplotlib and Pandas.
+- `HawaiiAnalysis_API/`: 
+  - `climate.ipynb`: A Jupyter Notebook containing the climate analysis and data visualizations. It includes detailed analysis of precipitation, temperature, and station data using SQLAlchemy to interact with the SQLite database. Visualizations are created using Matplotlib and Pandas.
 
-- `app_solved.py`: A Flask application that provides a RESTful API to the climate data. This script makes the data available through various endpoints, allowing users to query precipitation, station, and temperature observation data.
+  - `app.py`: A Flask application that provides a RESTful API to the climate data. This script makes the data available through various endpoints, allowing users to query precipitation, station, and temperature observation data.
 
-- `Resources/`: 
+- `HawaiiAnalysis_API/Resources/`: 
   - `hawaii.sqlite`: The SQLite database file containing the climate data for Hawaii. It includes tables for measurement and station data.
 
-- `requirements.txt`: A text file listing the Python packages required to run the project. This file is used with `pip install -r requirements.txt` to install all necessary dependencies.
 
 ## Installation
 
@@ -65,7 +65,7 @@ This project is divided into two main parts: the climate analysis and the Flask 
       # or
       jupyter lab
       ```
-    - Open `climate_starter_solved.ipynb` from the Jupyter interface.
+    - Open `climate.ipynb` from the Jupyter interface.
 
 2. **Run the Analysis**:
     - Execute each cell in the notebook to perform the climate analysis and generate visualizations. 
@@ -78,7 +78,7 @@ Once the Flask server is running, you can access the API endpoints to retrieve c
 1. **Start the Flask server**:
     - Run the following command in your terminal from the project directory:
       ```bash
-      python app_solved.py
+      python app.py
       ```
     - The server will start on `http://localhost:5000`.
 
