@@ -69,15 +69,18 @@ def stations():
     session = Session(engine)
 
     # Perform a query to retrieve all station names in the database
-    stations_data = session.query(Station.station).all()
+    stations_data = session.query(Measurement.station, func.count(Measurement.station))\
+        .group_by(Measurement.station)\
+        .order_by(func.count(Measurement.station).desc())\
+        .all()
 
     # Closing the session to the database
     session.close()
 
-    # Save the query results as a list
-    stations_list = list(np.ravel(stations_data))
+    # Save the query results as a dictionary with station as a key and count of measurements is a value
+    stations_dict = [{station: count for station, count in stations_data}]
 
-    return jsonify(stations_list)
+    return jsonify(stations_dict)
 
 @app.route("/api/v1.0/tobs")
 def tobs():
