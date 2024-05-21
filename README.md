@@ -70,6 +70,15 @@ This project is divided into two main parts: the climate analysis and the Flask 
 2. **Run the Analysis**:
     - Execute each cell in the notebook to perform the climate analysis and generate visualizations. 
     - The notebook is interactive, allowing you to modify parameters and re-run sections to explore different aspects of the data.
+  
+#### Exploratory Precipitation Analysis
+
+![bar_chart](Images/bar_chart.png)
+
+#### Exploratory Station Analysis
+
+![histogram](Images/histogram.png)
+
 
 ### Using the Flask API
 
